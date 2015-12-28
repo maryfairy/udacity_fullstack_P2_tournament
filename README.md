@@ -7,17 +7,15 @@ marylesbirel@gmail.com
 
 ## What's Included
 
-Movies_Final/ 
-
 ├── py/ 
 
-│   ├── tournament.py
+│   ├── tournament.py -- contains all functions to successfully run the tournament and pass tests
 
-│   ├── tournament_test.py
+│   ├── tournament_test.py -- test file, added 3 additional test to test Odd # of players and Opponent Match Wins
 
 ├── sql/
 
-│   ├── tournament.sql
+│   ├── tournament.sql -- file containing tables and views for tournament database
 
 
 ## Quick Start
