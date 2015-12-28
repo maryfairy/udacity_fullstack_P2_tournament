@@ -99,7 +99,6 @@ def testReportMatches():
             raise ValueError("Each match loser should have zero wins recorded.")
     print "7. After a match, players have updated standings."
 
-
 def testPairings():
     deleteMatches()
     deletePlayers()
@@ -117,7 +116,9 @@ def testPairings():
             "For four players, swissPairings should return two pairs.")
     [(pid1, pname1, pid2, pname2), (pid3, pname3, pid4, pname4)] = pairings
     correct_pairs = set([frozenset([id1, id3]), frozenset([id2, id4])])
-            raise ValueError(
+    actual_pairs = set([frozenset([pid1, pid2]), frozenset([pid3, pid4])])
+    if correct_pairs != actual_pairs:
+        raise ValueError(
             "After one match, players with one win should be paired.")
     print "8. After one match, players with one win are paired."
 
@@ -198,3 +199,6 @@ if __name__ == '__main__':
     testByeToRemainingPlayer()
     testOMW()
     print "Success!  All tests pass!"
+
+
+
